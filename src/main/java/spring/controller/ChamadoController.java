@@ -37,7 +37,8 @@ public class ChamadoController {
 				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(validator.getMessage());
 			} else {
 				chamadoService.createChamado(chamado);
-				StringResponse response = new StringResponse("O registro foi gravado com sucesso");
+				StringResponse response = new StringResponse(
+						"O chamado foi gerado. Seu código é " + chamado.getCodigo());
 				return ResponseEntity.status(HttpStatus.CREATED).body(response);
 			}
 		} catch (Exception err) {
@@ -98,7 +99,7 @@ public class ChamadoController {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
 		}
 		chamadoService.deleteChamadoByCod(cod);
-		StringResponse response = new StringResponse("O chamado " + cod + " foi excluído!");
+		StringResponse response = new StringResponse("O chamado " + cod + " foi excluído");
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
 }

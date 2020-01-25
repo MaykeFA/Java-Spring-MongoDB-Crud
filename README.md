@@ -1,2 +1,4 @@
-# Java-Spring-Mongo-Crud
-CRUD em Java utilizando o Framework Spring Boot em conjunto com banco de Dados MongoDB.
+Spring Boot + MongoDB
+
+mvn clean install
+mvn spring-boot:run

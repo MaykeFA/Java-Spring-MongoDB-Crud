@@ -5,10 +5,10 @@ Caso queira realizar os testes com um banco local, basta editar o arquivo **src\
 
 ### Subindo a aplicação
 
-1. Instale as depêndencias:
-   mvn clean install
-1. Suba a aplicação.
-   mvn spring-boot:run
+1. Instale as depêndencias: 
+> mvn clean install
+2. Suba a aplicação: 
+>mvn spring-boot:run
 
 Com isso, você já terá um servidor de aplição rodando a API.
 
